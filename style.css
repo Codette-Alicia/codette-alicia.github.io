@@ -21,19 +21,12 @@ body {
     padding: 0;
 }
 
-html, body {
-    /* Prevents the browser from stretching past the edges */
-    overscroll-behavior: none;
-    
-    /* Matches the hidden canvas to your background color or image */
-    background-color: #000000; 
-    
-    /* Ensures the page takes up 100% of the screen height */
-    min-height: 100%;
-}
-
 button {
     width: 40px;
     height: 40px;
     align-item: center;
+}  
+
+h1, h2 {
+   text-align: center: 
 }    
