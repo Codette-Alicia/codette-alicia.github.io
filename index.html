@@ -1,16 +1,45 @@
-<DOCTYPE html>
- <html>
-<head>
- <style>
-   body {
-     background-image: url('milky-way.jpg');
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-   }
- </style>
-</head>
-<body>
- <h1>Welcome to My Project</h1>
-</body>
+<!DOCTYPE html> 
+<html lang=”en”> 
+<head> 
+<meta charset=”UTF-8”> 
+<meta http-equiv=”X-UA-Compatible” content=”IE=Edge”> 
+<meta name=”viewport” content=”width=device-width, initial-scale=1”> 
+<title>W26</title> 
+<style> 
+body { 
+background-image: url("milky-way.jpg"); 
+margin: 0; 
+padding: 0; 
+height: 100vh; 
+} 
+.sun { 
+position: fixed; 
+bottom: -50px; 
+left: -50px; 
+z-index: -1; 
+width: 200px; 
+height: 200px; 
+background: radial-gradient(circle, #ffea00 20%, #ff9100 100%): 
+border-radius: 50%; 
+box-shadow: 0 0 30px #ff9100, 0 0 60px #ff5500; 
+} 
+</style> 
+<link rel=”stylesheet” href=”style.css”> 
+</head> 
+<body> 
+<h1>PLANETS BEYOND</h1> 
+<h2>OUR SOLAR SYSTEM</h2> 
+<div class=”search”> 
+<input type=”number” id=”searchBar” placeholder=”DISCOVER”/> 
+</div> 
+<h3>Type any WHOLE number from 1-3</h3> 
+<script src=”main.js”></script> 
+<div class=”sun”> 
+<div class=”orbit-path”> 
+<div class=”planet”></div> 
+</div> 
+<div class=”orbit-1”> 
+<div class=”p-1”></div> 
+</div> 
+</body> 
 </html>
