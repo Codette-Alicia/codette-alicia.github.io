@@ -1,89 +1,320 @@
-h1 { 
-font-size: 110px: 
-text-align: center; 
-margin-bottom: 0px; 
-margin-top: 50px; 
-} 
-h2 { 
-font-size: 30px; 
-margin-top: 0px; 
-text-align: center; 
-} 
-h3 { 
-text-align: center; 
-} 
-input { 
-border-radius: 50px; 
-text-align: center; 
-} 
-.search { 
-justify-content: center; 
-display: flex; 
-} 
-.sun { 
-position: fixed; 
-bottom: -50px; 
-left: -50px; 
-z-index: -1; 
-width: 150px; 
-height: 150px; 
-background: radial-gradient(circle, #ffea00 20%, #ff9100 
-100%); 
-border-radius: 50%; 
-box-shadow: 0 0 30px #ff9100, 0 0 60px #ff5500; 
-} 
-.orbit-path { 
-position: absolute; 
-top: 50%; 
-left: 50%; 
-width: 240px; 
-height: 240px; 
-transform: translate(-50%, -50%); 
-border: 1px dashed rgba(255, 255, 255, 0.2); 
-border-radius: 50%; 
-animation: spin 180s linear infinite; 
-} 
-.planet { 
-position: absolute; 
-top: 0; 
-left: 65%; 
-width: 9px; 
-height: 9px; 
-transform: translateX(-50%); 
-background: #00b4d8; 
-border-radius: 50%; 
-box-shadow: 0 0 10px #00b4d8; 
-} 
-.orbit-1 { 
-position: absolute; 
-top: 50%; 
-left: 50%; 
-width: 280px; 
-height: 280px; 
-transform: translate(-50%, -50%); 
-border: 1px dashed rgba(255, 255, 255, 0.2); 
-border-radius: 50%; 
-animation: spin 120s linear infinite; 
-} 
-.planet { 
-position: absolute; 
-top: 0; 
-left: 65%; 
-width: 9px; 
-height: 9px; 
-transform: translateX(-50%); 
-background: #00b4d8; 
-border-radius: 50%; 
-box-shadow: 0 0 10px #00b4d8; 
-} 
-@keyframes spin { 
-from { 
-transform: translate(-50%, -50%) rotate(0deg); 
-} 
-to { 
-transform: translate(-50%, -50%) rotate(360deg); 
-} 
-} 
-body { 
-color: white; 
-} 
+h1 {
+    font-size: 110px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+h2 {
+    font-size: 70px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+input {
+    border-radius: 50px;
+    text-align: center;
+}
+
+.search {
+    justify-content: center;
+    display: flex;
+}
+
+/* The Sun Container (Acts as the center anchor) */
+.sun {
+    position: fixed;
+    bottom: -50px;  
+    left: -50px;    
+    z-index: -1;    
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #ffea00 20%, #ff9100 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ff9100, 0 0 60px #ff5500;
+}
+
+/* The Orbit Line (Now safely locked inside the sun) */
+.o-1 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 350px;  
+    height: 350px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 10s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-1 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 12px;
+    height: 12px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #636074; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #48466E;
+}
+
+.o-2 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 550px;  
+    height: 550px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 15s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-2 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 11px;
+    height: 11px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #C06210; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #963F08;
+}
+
+.o-3 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 750px;  
+    height: 750px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 20s linear infinite; 
+}
+
+.p-3 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 18px;
+    height: 18px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #00b4d8; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #21FF00;
+}
+
+.o-4 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 1000px;  
+    height: 1000px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 22s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-4 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 16px;
+    height: 16px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #FF4600; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #FF3F2E;
+}
+
+.o-5 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 1400px;  
+    height: 1400px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 25s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-5 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 60px;
+    height: 60px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #D29662; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #B46D27;
+}
+
+.o-6 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 1600px;  
+    height: 1600px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 28s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-6 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #CEA969; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #C9A567;
+}
+
+.o-s {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 1640px;  
+    height: 1640px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 28s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-s {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 10px;
+    height: 80px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #A67D56; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #A67D56;
+}
+.o-7 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 1800px;  
+    height: 1800px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 30s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-7 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 22px;
+    height: 22px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #5392CC; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00b4d8;
+}
+
+.o-8 {
+    position: absolute;
+    /* Center the orbit ring exactly on the sun's center point */
+    top: 50%;
+    left: 50%;
+    width: 2000px;  
+    height: 2000px;
+    /* Shift the ring back by exactly half its width/height to center it */
+    transform: translate(-50%, -50%); 
+    
+    border: 1px dashed rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    
+    /* Pulls the planet into a spin around the sun */
+    animation: spin 31s linear infinite; 
+}
+
+/* The Tiny Planet */
+.p-8 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 21px;
+    height: 21px;
+    transform: translateX(-50%); /* Centers the planet perfectly on the line */
+    background: #1E5CA9; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #2A65B1;
+}
+/* The Spin Animation */
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+body {
+    color: white;
+}
