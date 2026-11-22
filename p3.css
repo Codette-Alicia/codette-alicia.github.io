@@ -1,0 +1,38 @@
+body {
+  color: white;
+  margin-left: 40px;
+}
+
+h1 {
+  font-size: 90px;
+  margin-bottom: 17px;
+}
+
+
+h3 {
+  font-size: 38px;
+}
+
+p, li {
+  font-size: 27px;
+}
+
+.look {
+  margin-top: 40px;
+  justify-content: center;
+  display: flex;
+}
+
+input {
+  border-radius: 50px;
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+}
+
+.home { 
+  padding-left: 30px;
+  padding-top: 20px;
+}
